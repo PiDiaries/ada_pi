@@ -15,15 +15,15 @@
   pinMode(led1, OUTPUT);
   pinMode(led2, OUTPUT);
   pinMode(motion,INPUT);
-  Serial.begin(9600);
+  Serial1.begin(9600);
 }
 
 
 void loop() {
   //put your main code here, to run repeatedly:
   if (digitalRead(motion) == HIGH) {
-    if (Serial.available()) {
-      flash(Serial.read() - '0'); //converts Serial Messgae into a number
+    if (Serial1.available()) {
+      flash(Serial1.read() - '0'); //converts Serial Message into a number
     }
    }
    delay(5000);
