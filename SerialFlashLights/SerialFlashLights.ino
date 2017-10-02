@@ -15,13 +15,13 @@ void setup() {
   pinMode(led1, OUTPUT);
   pinMode(led2, OUTPUT);
   pinMode(motion, INPUT);
-  Serial.begin(9600);
+  Serial1.begin(9600);
 }
 
 void loop() {
   //put your main code here, to run repeatedly:
   if (digitalRead(motion) == HIGH) {
-    Serial.println("Motion detected!");
+    Serial1.println("Motion detected!");
     digitalWrite(led1, HIGH);
     digitalWrite(led2, HIGH);
     delay(wait);
